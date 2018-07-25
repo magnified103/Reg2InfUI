@@ -1,0 +1,15 @@
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\bin\Debug\Reg2InfUI.exe.config
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\bin\Debug\Reg2InfUI.exe
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\bin\Debug\Reg2InfUI.pdb
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI.csprojAssemblyReference.cache
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\MainWindow.g.cs
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\App.g.cs
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI_MarkupCompile.cache
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI_MarkupCompile.lref
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\MainWindow.baml
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI.g.resources
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI.Properties.Resources.resources
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI.csproj.GenerateResource.cache
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI.exe
+C:\Users\Nguyen Viet Dung\Documents\CODING file\Visual Studio file\Reg2InfUI\Reg2InfUI\obj\Debug\Reg2InfUI.pdb
