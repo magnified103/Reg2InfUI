@@ -9,13 +9,13 @@ namespace Reg2InfUI
 {
     class RegistryEnum
     {
-        string KeyName;
-        RegistryValueKind KeyType;
-        object KeyValue;
+        string ValueName;
+        RegistryValueKind ValueType;
+        object Value;
 
         protected string bitmask_value()
         {
-            switch (KeyType)
+            switch (ValueType)
             {
                 case RegistryValueKind.Binary:
                     return "0x00000001";

@@ -12,25 +12,19 @@ namespace Reg2InfUI
     {
         RegistryKey regKey = Registry.LocalMachine;
 
-        protected RegistryKey openKey(string location)
-        {
-            regKey = regKey.OpenSubKey(location);
-            return regKey;
-        }
-
         protected List<string> listSubKey()
         {
-            List<string> lsSubKey = new List<string>();
+            List<string> listSubKey = new List<string>();
             if (regKey != null)
             {
                 string[] temp = regKey.GetSubKeyNames();
                 foreach (string str in temp)
                 {
-                    lsSubKey.Add(str);
+                    listSubKey.Add(str);
                 }
-                return lsSubKey;
+                return listSubKey;
             }
-            return lsSubKey;
+            return listSubKey;
         }
         protected bool Is_SubKey_Exist(string location)
         {
@@ -44,7 +38,7 @@ namespace Reg2InfUI
                 return false;
             }
         }
-        protected bool Is_KeyName_Exist(string KeyName, string location)
+        protected bool Is_ValueName_Exist(string KeyName, string location)
         {
             regKey = regKey.OpenSubKey(location);
             if (Registry.GetValue(location, KeyName, null) != null)

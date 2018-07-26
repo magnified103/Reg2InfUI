@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Reg2InfUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Reg2InfUI" 
+        Height="450" 
+        Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <TextBlock Margin="10" VerticalAlignment="Center"><Bold>INF WRITING BOX (OPTIONAL)</Bold></TextBlock>
+        <TextBox Grid.Row="1" Name="INF_writing" Margin="20" />
     </Grid>
 </Window>

@@ -25,5 +25,6 @@ namespace Reg2InfUI
         {
             InitializeComponent();
         }
+
     }
 }
