@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace Reg2InfUI
 {
@@ -26,5 +27,26 @@ namespace Reg2InfUI
             InitializeComponent();
         }
 
+        private void modifyCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            if (modifyCheck.IsChecked == true)
+            {
+                INF_writing.IsReadOnly = false;
+            }
+            else
+            {
+                INF_writing.IsReadOnly = true;
+            }
+        }
+
+        private void btnSaveINF_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog INFsaveDialog = new SaveFileDialog();
+            INFsaveDialog.Filter = "Setup Information (*.inf)|*.inf|Text file (*.inf)|*.txt";
+            if (INFsaveDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(INFsaveDialog.FileName, INF_writing.Text);
+            }
+        }
     }
 }

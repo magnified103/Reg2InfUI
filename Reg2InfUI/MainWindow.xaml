@@ -7,17 +7,59 @@
         mc:Ignorable="d"
         Title="Reg2InfUI" 
         Height="450" 
-        Width="800">
-    <Grid>
+        Width="800"
+    >
+    <Grid Margin="10" Background="#e6f5ff">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="10*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Margin="10" VerticalAlignment="Center"><Bold>INF WRITING BOX (OPTIONAL)</Bold></TextBlock>
-        <TextBox Grid.Row="1" Name="INF_writing" Margin="20" />
+        <TextBlock 
+            Margin="10"      
+            VerticalAlignment="Center" 
+            FontSize="15" 
+            Opacity="0.5"
+        >
+            <Bold>
+                INF WRITING BOX
+            </Bold>
+        </TextBlock>
+        
+        <CheckBox 
+            Grid.Row="1" 
+            VerticalAlignment="Center" 
+            Name="modifyCheck" 
+            Margin="5" 
+            IsChecked="False" 
+            Checked="modifyCheck_Checked" 
+            Unchecked="modifyCheck_Checked"
+        >
+            Enable modification
+        </CheckBox>
+        
+        <TextBox
+            Grid.Row="2"
+            Name="INF_writing"
+            Margin="5"
+            AcceptsReturn="True"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto"
+            IsReadOnly="True"
+        />
+        <Button 
+            Grid.Row="3" 
+            Name="btnSaveINF" 
+            Click="btnSaveINF_Click"
+            Margin="5"
+        >
+            Save
+        </Button>
+        
     </Grid>
 </Window>
