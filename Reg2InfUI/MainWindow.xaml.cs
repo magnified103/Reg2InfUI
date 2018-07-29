@@ -37,7 +37,7 @@ namespace Reg2InfUI
             {
                 INF_writing.IsReadOnly = true;
             }
-        }
+        }	//check if "enable modification" checkbox was checked
 
         private void btnSaveINF_Click(object sender, RoutedEventArgs e)
         {
@@ -47,6 +47,75 @@ namespace Reg2InfUI
             {
                 File.WriteAllText(INFsaveDialog.FileName, INF_writing.Text);
             }
-        }
-    }
+        }	//save inf file
+
+		private void reg_Enter(object sender, RoutedEventArgs e)
+		{
+			reg_location_input.IsReadOnly = true;
+			second_section_Visiblity(Visibility.Visible);
+			first_section_Background(Brushes.Gray);
+			second_section_backgroundDefault();
+		}	//load registry input section
+
+		private void reg_Modify(object sender, RoutedEventArgs e)
+		{
+			reg_location_input.IsReadOnly = false;
+			second_section_Visiblity(Visibility.Hidden);
+			first_section_backgroundDefault();
+		}	//modify registry input section
+
+		private void driver_Enter(object sender, RoutedEventArgs e)
+		{
+			reg_location_input.IsReadOnly = true;
+			driver_name_input.IsReadOnly = true;
+			first_section_Background(Brushes.Gray);
+			second_section_Background(Brushes.Gray);
+		}	//load driver input section
+
+		private void driver_Modify(object sender, RoutedEventArgs e)
+		{
+			reg_location_input.IsReadOnly = true;
+			driver_name_input.IsReadOnly = false;
+			first_section_Background(Brushes.Gray);
+			second_section_backgroundDefault();
+		}	//modify driver input section
+
+		private void second_section_Visiblity(Visibility mode)
+		{
+			border_driver_name.Visibility = mode;
+		}	//the visiblity of second section
+
+		private void first_section_Background(Brush color)
+		{
+			border_reg_location.Background = color;
+			reg_location_input.Background = color;
+			reg_input_Enter.Background = color;
+			reg_input_Modify.Background = color;
+		}
+
+		private void first_section_backgroundDefault()
+		{
+			border_reg_location.Background = Brushes.White;
+			reg_location_input.Background = Brushes.White;
+			reg_input_Enter.Background = Brushes.LightGray;
+			reg_input_Modify.Background = Brushes.LightGray;
+		}
+
+		private void second_section_Background(Brush color)
+		{
+			border_driver_name.Background = color;
+			driver_name_input.Background = color;
+			driver_input_Enter.Background = color;
+			driver_input_Modify.Background = color;
+		}
+
+		private void second_section_backgroundDefault()
+		{
+			border_driver_name.Background = Brushes.White;
+			driver_name_input.Background = Brushes.White;
+			driver_input_Enter.Background = Brushes.LightGray;
+			driver_input_Modify.Background = Brushes.LightGray;
+		}
+
+	}
 }
