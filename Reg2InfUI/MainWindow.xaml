@@ -9,7 +9,19 @@
         Height="450" 
         Width="800"
     >
-    <TabControl TabStripPlacement="Left">
+	<Window.Resources>
+		<ControlTemplate x:Key="ProgressTemplate">
+			<TextBlock 
+				Foreground="DarkBlue" 
+				FontSize="20" 
+				HorizontalAlignment="Center" 
+				VerticalAlignment="Center"
+				Text="{Binding ElementName=sectionName, Path=Text}"
+			/>
+		</ControlTemplate>
+	</Window.Resources>
+
+	<TabControl TabStripPlacement="Left" Name="mainTab" SelectionChanged="mainTab_SelectionChanged">
         <TabItem Header="General" Height="50">
             <Grid Margin="10">
                 <Grid.ColumnDefinitions>
@@ -63,7 +75,7 @@
                 <TextBox
                     Grid.Row="1"
                     Grid.RowSpan="2"
-                    Name="INF_writing"
+                    Name="INF_writingBox"
                     Margin="5"
                     AcceptsReturn="True"
                     HorizontalScrollBarVisibility="Auto"
@@ -105,7 +117,7 @@
 							Grid.ColumnSpan="3"
 							VerticalAlignment="Center"
 						>
-							Type the location of WP registry hive (HKLM/SYSTEM):
+							Type the hive name in HKLM that loaded WP SYSTEM registry:
 						</TextBlock>
 
 						<TextBox
@@ -142,7 +154,6 @@
 					Margin="5"
 					BorderBrush="Gray"
 					BorderThickness="2"
-					Visibility="Hidden"
 				>
 
 					<Grid>
@@ -162,7 +173,7 @@
 							Grid.ColumnSpan="3"
 							VerticalAlignment="Center"
 						>
-							Type driver's name:
+							Type driver's INF name:
 						</TextBlock>
 
 						<TextBox
@@ -193,6 +204,75 @@
 
 				</Border>
 
+				<Grid Grid.Column="1" Grid.Row="3">
+
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="4*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+
+					<Border
+						Margin="5"
+						BorderBrush="Gray"
+						BorderThickness="2"
+					>
+						<Button Click="cancel_Click">
+							Cancel
+						</Button>
+					</Border>
+
+					<Border
+						Grid.Column="2"
+						Margin="5"
+						BorderBrush="Gray"
+						BorderThickness="2"
+					>
+						<Button Click="next_Click">
+							Next
+						</Button>
+					</Border>
+					
+				</Grid>
+
+				<Grid Grid.Column="1" Grid.Row="2">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.4*" />
+						<RowDefinition Height="0.2*" />
+						<RowDefinition Height="0.4*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+
+					<Border
+						Grid.Row="4"
+						Margin="5"
+						BorderBrush="Gray"
+						BorderThickness="2"
+					>
+						<TextBox
+							Name="outputBox"
+							HorizontalScrollBarVisibility="Auto"
+							VerticalScrollBarVisibility="Auto"
+							IsReadOnly="True"
+						/>
+					</Border>
+
+					<ProgressBar
+						Grid.Row="2"
+						Margin="10"
+						Name="progressBar"
+						Template="{StaticResource ProgressTemplate}"
+						Maximum="100"
+						Minimum="0"
+						Value="0"
+					/>
+					<TextBlock 
+						Name="sectionName" 
+						Visibility="Hidden"
+						Text="{Binding ElementName=sectionName, Path=Text}"
+					/>
+				</Grid>
+
 			</Grid>
         </TabItem>
         <TabItem Header="Option" Height="50">
@@ -216,9 +296,12 @@
                     FontSize="15"
                     Margin="10"
                 >
-                    Made by @dung11112003   
+                    Made by @dung11112003
                 </TextBlock>
             </Grid>
         </TabItem>
-    </TabControl>
+
+		<TabItem Header="Exit" Height="50" />
+
+	</TabControl>
 </Window>

@@ -7,7 +7,7 @@ using Microsoft.Win32;
 
 namespace Reg2InfUI
 {
-    class RegistryEnum
+    public class RegistryEnum
     {
         string ValueName;
         RegistryValueKind ValueType;
